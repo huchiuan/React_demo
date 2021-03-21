@@ -1,5 +1,5 @@
 import React from"react";
-
+import "./styles/style.css";
 
 const App = () =>{ 
   let friends = ["edison","manting","tina"];
