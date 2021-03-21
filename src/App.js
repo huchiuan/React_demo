@@ -1,19 +1,19 @@
 import React from"react";
 import "./styles/style.css";
+import Friend from "./friend";
+
 
 const App = () =>{ 
-  let friends = ["edison","manting","tina"];
+  let friends = [{name:"harry",age:17,desc:"harryharryharry"},
+  {name:"dick",age:17,desc:"dickdick"},
+  {name:"ron",age:12,desc:"ronronron"},
+                ];
   return (
     <div>
       <h1>hi</h1>
-      <p>我的朋友有:</p>
-      {
-        friends.map(
-          (friend)=> {
-          return <p>{friend}</p>;
-        }
-        )
-      }
+      {friends.map((friend) => (
+        <Friend name={friend.name} age={friend.age} desc={friend.desc} />
+      ))}
     </div>
   );
 
